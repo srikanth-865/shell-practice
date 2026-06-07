@@ -1,4 +1,4 @@
 #!/bin/bash
 
-date=$(date)
+date=$(date+%s)
 echo "today date is $date"
