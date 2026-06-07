@@ -1,4 +1,6 @@
 #!/bin/bash
 
 date=$(date +%s)
-echo "today date is $date"
+date1=$(date)
+echo "time in without seconds:$date1"
+echo "time in with seconds $date"
