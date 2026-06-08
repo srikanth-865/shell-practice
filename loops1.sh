@@ -4,6 +4,8 @@ USERID=$(id -u)
 LOGS_DIR=/var/log/shell-script  # prevviously this after giving root acces to var files/home/ec2-user/shell-pract
 LOGS_FILE="$LOGS_DIR/$0.log" # /home/ec2-user/shell-logs/10-logs.sh.log
 
+Timestamp=$(date "+%Y-%m-%d %H %M:%S")
+
 # Check root access or not
 if [ $USERID -ne 0 ]; then
     echo "Please run this script with root access"
@@ -14,10 +16,10 @@ fi
 # second arg -> exit code
 VALIDATE(){
     if [ $2 -ne 0 ]; then
-        echo "Installing $1 is ... FAILED" | tee -a $LOGS_FILE
+        echo "$Timestamp Installing $1 is ... FAILED" | tee -a $LOGS_FILE
         exit 1
     else
-        echo "Installing $1 is ... SUCCESS" | tee -a $LOGS_FILE
+        echo "$Timestamp Installing $1 is ... SUCCESS" | tee -a $LOGS_FILE
     fi
 }
 
