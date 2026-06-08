@@ -28,12 +28,12 @@ for package in $@
 do
 echo "installing packages:$package"
 dnf list installed $package &>> $LOGS_FILE 
-if [ $? -ne 0];then
+if [ $? -ne 0]; then
 dnf install  $package -y &>>$LOGS_FILE
 VALIDATE "installing$package" $?
 else
 
-echo "$package already installed ..skip"
+echo "$timestamp [info] $package already installed ..skip"
  fi
 done
 
