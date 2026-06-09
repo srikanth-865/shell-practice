@@ -3,5 +3,5 @@
 set -e 
 
 echo "Hello World !!"
-dfadshfklf
+dfadshfklf #error is showing error in terminal,not execute next line
 echo "Continuing..."
