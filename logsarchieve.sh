@@ -36,3 +36,21 @@ echo "$FILE"
 ARCHIEVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"
 
 tar -czvf $ARCHIEVE_FILE $FILES
+
+#after this  run with terminal
+#cd /var/log/logs-archieve
+#ls -l
+#we get archieve file
+#then we get extract with tar -xzf withblogs archieve filename#
+
+if [ $? -eq 0 ]; then
+    echo "Archieval is success, deleting the files"
+    while IFS= read -r FILE
+    do
+        rm -f $FILE
+        echo "Deleted file: $FILE"
+    done <<< "$FILES"
+else
+    echo "ERROR:: Archieval is failed"
+    exit 1
+fi
