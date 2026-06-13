@@ -40,7 +40,7 @@ tar -czvf $ARCHIEVE_FILE $FILES
 #after this  run with terminal
 #cd /var/log/logs-archieve
 #ls -l
-#we get archieve file
+#we get archieve file in logs-archieve 
 #then we get extract with tar -xzf withblogs archieve filename#
 
 if [ $? -eq 0 ]; then
