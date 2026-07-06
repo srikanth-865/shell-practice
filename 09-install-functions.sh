@@ -31,3 +31,28 @@ else
     dnf install nginx -y
     VALIDATE nginx $?
 fi
+
+
+# Why use both &>> and tee?
+
+# Suppose your script is:
+
+# dnf install mysql -y &>> install.log
+# echo "Installing MySQL is SUCCESS" | tee -a install.log
+# dnf install... produces a lot of detailed output (package download, dependencies, etc.), which is stored only in the log file.
+# The echo command prints a simple success or failure message to both the terminal and the log file.
+
+# For example:
+
+# Terminal
+# Installing MySQL is SUCCESS
+# Installing nginx is SUCCESS
+# Log file
+# Downloading packages...
+# Installing mysql...
+# Complete.
+# Installing MySQL is SUCCESS
+# Downloading packages...
+# Installing nginx...
+# Complete.
+# Installing nginx is SUCCESS
