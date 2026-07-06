@@ -1,7 +1,7 @@
  #!/bin/bash
 
-SOURCE_DIR=$1
-DEST_DIR=$2
+SOURCE_DIR=$1 #/var/log/roboshop
+DEST_DIR=$2 #/var/log/logs-archieve
 DAYS=${3:-14}
 
 if [ -z "$SOURCE_DIR" ] || [ -z "$DEST_DIR" ]; then
@@ -20,7 +20,7 @@ if [ ! -d "$DEST_DIR" ]; then
     exit 1
 fi
 
-FILES=$( find "$SOURCE_DIR" -type f -name "*.log" -mtime +$DAYS )
+FILES=$( find "$SOURCE_DIR" -type f -name "*.log" -mtime +$DAYS ) #files there in roboshop if not create dummy for testing
 
 if [ -z "$FILES" ]; then
     echo "Log files older than 14 days not found, nothing to do"
@@ -33,9 +33,9 @@ echo "$FILE"
  done <<< "$FILES"
 
  TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
-ARCHIEVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"
+ARCHIEVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"  #its full path as well as file/directory name
 
-tar -czvf $ARCHIEVE_FILE $FILES
+tar -czvf $ARCHIEVE_FILE $FILES #
 
 #after this  run with terminal
 #cd /var/log/logs-archieve

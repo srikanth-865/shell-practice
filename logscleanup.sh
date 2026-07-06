@@ -16,7 +16,7 @@ fi
 
 echo "Scanning $SOURCE_DIR for log files older than 14 days"
 
-FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS)
+FILES=$(find $SOURCE_DIR -name "*.log" -type f -mtime +$DAYS) #main use this for finding logs on which directtory or folder 
 
 if [ -z "$FILES" ]; then   #here -z is used for file check  avaiable or not
     echo "No log files older than 14 days found"

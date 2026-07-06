@@ -1,4 +1,4 @@
 #!/bin/bash
 
 TIMESTAMP=$(date)
-echo "timestamp is:$TIMESTAMP"g
+echo "timestamp is:$TIMESTAMP"
