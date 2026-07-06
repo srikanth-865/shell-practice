@@ -1,7 +1,3 @@
  #!/bin/bash
-set -e
-trap 'echo "Error occurred! $LINENO "' ERR
-
-ls /tmp
-
-ls /abcd
+echo "i am in $country"
+echo "PID is practice2.sh is $$" 
