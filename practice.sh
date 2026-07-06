@@ -1,4 +1,4 @@
  #!/bin/bash
  
-  today=(date)
+  today= $(date)
   echo "todays date&time is $today"
