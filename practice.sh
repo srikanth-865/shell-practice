@@ -1,6 +1,5 @@
  #!/bin/bash
- person1=$1
- person2=$2
-
- echo "$person1: i am from pdp"
- echo "$person2: i am from dmd"
+ 
+ echo "please enter your name"
+ read "my_name"
+ echo "you entering name as $my_name"

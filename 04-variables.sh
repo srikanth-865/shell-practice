@@ -1,9 +1,11 @@
-#!/bin/bash
+ #!/bin/bash
 
-PERSON1=$1
-PERSON2=$2
+echo "Please enter your username::"
+read USER_NAME # here USER_NAME is variable, whatever you enter in terminal stores in this variable
 
-echo "$PERSON1: Hey $PERSON2, we are going blast you!"
-echo "$PERSON2: Yes, please. you are welcome"
-echo "$PERSON1: Hey $PERSON2 I am serious"
-echo "$PERSON2: Hey $PERSON1, we are also serious"
+echo "Username is $USER_NAME"
+
+echo "Please enter your password::"
+read -s PASSWORD
+
+echo "Password is: $PASSWORD"
