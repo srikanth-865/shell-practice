@@ -35,7 +35,7 @@ echo "$FILE"
  TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 ARCHIEVE_FILE="$DEST_DIR/logs-archieve-$TIMESTAMP.tar.gz"  #its full path as well as file/directory name
 
-tar -czvf $ARCHIEVE_FILE $FILES #
+tar -czvf $ARCHIEVE_FILE $FILES # #tar -czvf /var/log/logs-archieve $file output we are copying file to this  logs-archieve
 
 #after this  run with terminal
 #cd /var/log/logs-archieve

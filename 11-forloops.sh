@@ -15,3 +15,10 @@ done
 # for i in $@ ;do
 # echo "$i"
 # done
+
+#another way is also
+
+# for ((i=1; i<=5; i++))
+# do
+#     echo "$i"
+# done
