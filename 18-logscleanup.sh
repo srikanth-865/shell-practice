@@ -31,4 +31,4 @@ do
 done <<< "$FILES"
 
 # < -> for file
-# <<< -> variable 
+# <<< -> variable in the file

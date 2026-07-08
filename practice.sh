@@ -1,5 +1,6 @@
 #!/bin/bash
-days=3
+days=14
+source=/var/log/roboshop
 
-file=$(find . -name "*.log" -type f -mtime +$days)
+file=$(find $source -name "*.log" -type f -mtime +$days)
 echo "we get files by $days and $file"
