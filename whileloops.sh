@@ -6,4 +6,4 @@ do
     echo "Age: $age"
     echo "Job: $job"
     echo "------"
-done < users.txt
+done < user.txt
