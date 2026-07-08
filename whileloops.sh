@@ -1,5 +1,9 @@
  #!/bin/bash
-while IFS= read -r line   # IFS Internal field seperator
+
+while IFS=',' read -r name age job
 do
-    echo "$line"
-done <02-srikanth.sh
+    echo "Name: $name"
+    echo "Age: $age"
+    echo "Job: $job"
+    echo "------"
+done < users.txt
