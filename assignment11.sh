@@ -9,7 +9,7 @@ Error_folder="/var/log/script-errors"
 sudo mkdir $Error_folder
 sudo chown -R ec2-user:ec2-user $Error_folder
 sudo chmod -R 755 $Error_folder
-ERRORLOGS_FILE="$Error_folder.log"
+ERRORLOGS_FILE="$Error_folder/scripts.log"
 echo "hello" 1>> $LOGS_FILE
 ls ljnkjl 2>> $ERRORLOGS_FILE
 
