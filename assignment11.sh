@@ -4,8 +4,11 @@ sudo mkdir -p $LOGS_FOLDER
 sudo chown -R ec2-user:ec2-user $LOGS_FOLDER
 sudo chmod -R 755 $LOGS_FOLDER
 LOGS_FILE="$LOGS_FOLDER.log"
-touch "$LOGS_FOLDER/srikanth.log"  1>> $LOGS_FILE
-touch "$LOGS_FOLDER/sk.log"      1>> $LOGS_FILE
+ls "$LOGS_FOLDER" 1>> $LOGS_FILE
+touch "$LOGS_FOLDER/srikanth.log"  
+echo "created srikanth.log" 1>> $LOGS_FILE
+touch "$LOGS_FOLDER/sk.log"   
+echo "created sk.log" 1>> $LOGS_FILE
  ls $LOGS_FOLDER 1>> $LOGS_FILE
 
 Error_folder="/var/log/script-errors"
