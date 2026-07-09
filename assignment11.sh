@@ -6,7 +6,7 @@ sudo chmod -R 755 $LOGS_FOLDER
 LOGS_FILE="$LOGS_FOLDER.log"
 touch "$LOGS_FOLDER/srikanth.log"
 touch "$LOGS_FOLDER/sk.log"
-echo "hello" 1>> $LOGS_FILE
+ $LOGS_FOLDER 1>> $LOGS_FILE
 
 Error_folder="/var/log/script-errors"
 sudo mkdir $Error_folder
