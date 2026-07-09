@@ -26,7 +26,7 @@ check_status(){
 
  install_package git
   install_package wget
-   install_package URL
+   install_package curl
 
 
 
