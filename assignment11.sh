@@ -1,9 +1,11 @@
 #!/bin/bash
-LOGS_FOLDER="/var/log/script"
+LOGS_FOLDER="/var/log/tmp/script"
 sudo mkdir -p $LOGS_FOLDER
 sudo chown -R ec2-user:ec2-user $LOGS_FOLDER
 sudo chmod -R 755 $LOGS_FOLDER
-LOGS_FILE="$LOGS_FOLDER/$0.log"
+LOGS_FILE="$LOGS_FOLDER.log"
+touch srikanth.log
+touch sk.log
 echo "hello" 1>> $LOGS_FILE
 
 Error_folder="/var/log/script-errors"
